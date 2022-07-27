@@ -1,0 +1,88 @@
+자바 18버전 -> 1.8이라고 부름
+java -> oracle jdk 1.8 -> 유료 >>>>>> openjdk + 추가기능 // 이것을 아무도안씀
+      -> open  jdk 1.8 -> 무료 >>>>>> 실무에서 씀(환경변수안해도된다...(알아서됨))
+
+프로젝트를 만들때 javase-1.8
+
+변수 -> 객체	좀 더 데이터를 저장하고 싶어서 사용함
+
+기본형
+참조형 String + class (객체)
+변수라는게 RAM에 저장되는데 RAM 어디에 저장되는지
++, -, *, /, > ,< -> CPU에 저장된다 (연산자 처리)
+// 변수 -> RAM
+// 파일들 -> 하드디스크(HDD)
+
+ex) int a =4; ram에 4 저장
+String h="hello";	번지 수가 저장이 되고 heap에 "hello"가 저장된다.
+
+가비지 컬렉션 이란? heap 영역을 자동으로 지워준다
+static영역은 실행하면 컴퓨터에서 알아서 지워줌
+그러면 heap 영역은 언제 지워질까?
+자바 }가 끝날때
+
+Student s1 = new Student();
+		Student s2 = new Student();
+		Student s3= s1;
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+
+s1는 static 4번지에 저장 s2는 7번지 s3는 4번지 heap에서 같은 번지를 사용함.
+
+그러면 s1=null;했을때 heap영역은 사라지나?
+s3가 남아있기때문에 남아있고 s3=null;해주면 사라진다.
+
+그러면 기본형들은 어떻게 되는걸까?
+int a= 0;
+double b=3.1;
+char c='x';
+static에만 저장이 되고 heap영역에 저장된다.
+
+
+\r(한줄 뜀)
+asdf
+
+\l(커서를 내림)
+asdf
+	asdf
+\b(앞에있는 하나를 지움)
+asdf\b
+asd
+
+System.out.println("test\b");
+		// c++는 한 글자가 1byte
+		// java 한 글자는 2byte
+
+ctrl + shift +f => 정렬
+ctrl + d => 공백인 줄이 하나씩 줄어듬
+sysout ctrl + space => 자동완성
+ctrl + shitf + m => import 자동완성
+다중 if문과 else if 의차이
+다중 if문 같은 경우 전부 다 검사를한다.
+else if 같은경우 값이 참이면 나머지는 검사하지않고 끝낸다.
+
+
+
+<패키지 이름>
+===============================================
+기본형
+// 10, -1, 158 ,111111 -> 정수
+// short, int, long..
+// 실수 -> 13.5
+// float, double
+// char
+===============================================
+// String => 참조형
+// 실제 값은 heap에 저장됨
+// 참조형의 규칙은 첫번째에 대문자를 사용
+// Scanner, Randeo
+// 클래스를 만드는데 있어서 파일명 첫번째에 대문자를 넣는다
+// 참조형은 컴퓨터가 몇비트인지에 따라 달라짐 (cmd 에서 set쳐서 보는게 정확함)
+// 이 컴퓨터 기준 64bit -> 8byte <1byte = 8bit>
+===============================================
+
+// byte short int long
+// 1byte 2byte 4byte 8byte
+// 현재는 정수면 int씀, 실수는 double, 문자열은 String을 씀

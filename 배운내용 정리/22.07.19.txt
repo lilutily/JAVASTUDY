@@ -1,0 +1,30 @@
+ ram 저장 구성
+<static>			<stack>			<heap>
+
+오라클 사이트에서 다운받아야 하는게 정상이지만 오라클 사이트 화면에
+계속 변경되서 깃허브에서 다운
+
+개발자들이 협업할때 자주이용하는 사이트
+github spring -> 웹에 관련된 프로젝트를 만들고
+	      -> github에서 소스공유
+
+cmd에서 버전을 확인할때 java -version이 더 자세히 나옴
+openjdk version "1.8.0_332" 라고 나옴 (openjdk가 포인트)
+
+이클립스 런처 실행할때 저장위치에 한글이없어야된다(알수없는 오류날수도있음)
+
+java 1.0 -> ~~~~~~~ java 1.5 ---> java 1.8 ->>>>>> java 1.9
+		    java 5	         java 8	        java 9 ------> 10~~~
+
+회사입장 : 새로운 버전이 나오면 업그레이드하기 껄끄러워함
+	  교육, 테스트, 새로운버전의 버그
+	 가장많이 쓰는버전은 1.8
+
+이클립스 -> java에 특화됨
+vscode -> html,css,js(프론트엔드) -> java db html css -> backend(백엔드) -> spring
+
+<<객체>>
+22.07.19 Constructor 
+
+자바에서는 모든 오브젝트를 상속받는다.
+// ctrl + shift + o 안쓰는 utill 삭제

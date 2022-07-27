@@ -1,0 +1,32 @@
+// 클래스 명 중복? -> 남이 작업해준것(라이브러리)를 적극적으로 활용하자
+// package->class
+// package : 클래스명이 중복될때 구분할 수 있는 최후의 수단
+// 그래서 패키지를 만들때 package 명까지 중복되면 구분할 수단이 없다.
+// -> package명이 전세계적으로 유일해야한다.
+
+// 회사명 거꾸로 -> com.회사명.프로젝트명.카테고리 : com.회사명.프로젝트명.main || bitcoin
+// ex) naver.com
+// com.naver
+
+소스 줄때	
+* 내가 만든 소스가 아니라 다른 소스를 줌
+ * 기존에는 export해서 줬었는데...
+ * Export -> JAR File
+ * 주의사항으로는 한번이라도 실행하고 만들어야한다는점
+
+/** shitf + enter (*이 2개) 하고 주석에 이것이 무엇인지 적어줄것
+(현재 이자리의 이클립스는 영어로만 주석달기)
+위의 Project-> Generate Javadocument 클릭후 폴더 지정후 생성
+생성된 index 파일과 jar 파일을 준다
+
+/* 프로젝트 우클릭
+ * build path -> configure bulid path 클릭
+ * library 클릭후 Add External jars 클릭후 아까 만들어둔
+ * jar파일을 apply해준다.
+ * 
+ * 파일을 줄때 아까 만들어둔 jar파일도 같이 넣어서 줘야된다.
+ * 링크만 달아둔것이기 때문이다.
+ * */
+만들어 둔것은 programmerLife, boss쪽을 볼것
+
+추가로 입력할때 직접다 입력하지말고 자동입력을 적극활용할것(ctrl+space)

@@ -1,0 +1,21 @@
+xml 
+
+developers.naver
+
+Client ID : ERPZTWwjHAxnCnarI8us
+Client Secret : Mnbc34aR0p
+
+https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EA%B1%B1
+
+printf -> 사용이유는 콘솔창에서 먼저 확인할려고
+확인 이후 문제가없으면 print, println쓰는느낌
+
+chrome에 jsonview 확장프로그램 추가설치
+
+<open weather>https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=baff8f3c6cbc28a4024e336599de28c4&units=metric
+
+JSONParser jp = new JSONParser(); // 선언
+JSONObject jo = (JSONObject) jp.parse(isr); // { 으로 시작하면 object
+[]이면 JSONArray
