@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 배너</title>
+<style>
+#mask {
+    width: 500px;
+    height: 100px;
+    background: yellow;
+    margin: auto;
+    position: relative; 
+    overflow: hidden;
+    border: 1px solid magenta;
+    /* 자식 때문에.. 즉 자식이 position을 명시하면 부모도 명시해야 한다 */
+}
+</style>
+<script src="./Product.js"></script>
+<script src="./data.json"></script>
+<script>
+    // 비어있는 배열 생성
+    var productArray=[]; // new Array(); 
+    var flag=true;
+    // 객체 left 좌표 . left 값을 몇 픽셀씩 이동할지...
+    // 브라우저가 떠있는 동안, 즉 프로그램이 가동되고 있는 한 무한루프로 move() 함수를 호출할 영역
+    function auto() {
+        if(flag) {
+            for(var i=0; i<7; i++) {
+            productArray[i].x=productArray[i].x-1; // 각자의 자기자신의x값에 velX를 더한다 /  전역변수로 지정하면 시간이 지날수록 더 빨라짐
+            productArray[i].move();
+         }
+        }
+        
+      
+        setTimeout("auto()", 100); // 1000분의 10초뒤에 auto() 호출
+    }
+
+    function init() {
+        // 이미지 7개를 생성하여 컨텐츠를 구성
+        for(var i=0; i<7; i++) {
+            var arr = movies.marvel; // 영화들 배열
+            var path = arr[i].url;
+            var width=90;
+            var x=(width+5)*i;
+            productArray[i] = new Product(document.getElementById("mask"),path,width,90,x,5);
+        }
+       
+
+    }
+    addEventListener("load", function() {
+        init();
+        auto();
+    });
+</script>
+</head>
+<body>
+   <div id="mask"></div> 
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부드러운 감속도 공식</title>
+<style>
+#box {
+    width: 100px;
+    height: 100px;
+    background:red;
+    
+}
+</style>
+<script>
+// 평상시에는 목표지점을 명시해서, 단번에 건너뛰는 효과가 나타났다 하지만,
+// 부드럽게 움직이려면 목표지점에 한꺼번에 다가가지 말고, 조금씩 가야된다 -> 감속도 공식적용
+var targetX=500;
+var a=0.1; // 다가가는 정도를 표현하는 비율 계수(값이 커질수록 크게 가짐)
+function move() {
+    document.getElementById("box");
+    
+    // 나의위치 = 현재나의위치+ a*(목표지점-현재나의위치)
+    // alert(box.style.left);
+    box.style.left=parseInt(box.style.left)+a*(targetX - parseInt(box.style.left)) +"px";
+    // box.style.left=box.style.left+a*(targetX-box.style.left)+"px";
+    // 스타일시트로 값주고 자바스크립트로 값을 주면 안나옴 -> 임베디드 방식 말고 인라인 방식으로ㅓ 가보자
+    setTimeout("move()", 10);
+}
+</script>
+</head>
+<body>
+    <div id="box" onMouseOver="move()" style="position: absolute;left:0px;top:100px;"></div>
+</body>
+</html>
