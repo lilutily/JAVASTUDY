@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml 은 html과 달리 개발자가 태그를 정의할 수 있다 -->
+<members>
+	<member>
+		<name>트럼프</name>
+		<nation>America</nation>
+	</member>
+	
+	<member>
+		<name>정은이</name>
+		<nation>North Korea</nation>
+	</member>
+	
+	<member>
+		<name>마크롱</name>
+		<nation>France</nation>
+	</member>
+</members>
